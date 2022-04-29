@@ -1,0 +1,74 @@
+@import "variables";
+
+.grid-gap {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10vh;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.vh100{
+  height: 100vh;
+    }
+
+.non-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.three-colored-children {
+  &>*{
+    &:nth-child(1) {
+      color: $primary-blue;
+    }
+
+    &:nth-child(2) {
+      color: $primary-red;
+    }
+
+    &:nth-child(3) {
+      color: $primary-orange;
+    }
+  }
+}
+
+.button-close {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  border: 1px solid white;
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  background: $white;
+  &:hover {
+    cursor: pointer;
+    background: gray;
+  }
+  p {
+    color: $black !important;
+  }
+}
+
+

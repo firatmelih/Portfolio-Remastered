@@ -1,0 +1,90 @@
+{
+  "work": [
+    {
+      "id": 5,
+      "company": "VUCX",
+      "location": "Germany, Cologne",
+      "companyLink":"https://www.vucx.de/en",
+      "position": "Frontend Developer",
+      "workType": "Part-time",
+      "startDate": {
+        "year": "2021",
+        "month": "October"
+      },
+      "endDate": {
+        "year": "",
+        "month": ""
+      },
+      "about": "Germany Cologne based company. \n Research & evidence focused,\ncustomer centric and with an open mind set to create value for brands, products and services.\n "
+    },
+    {
+      "id": 4,
+      "location": "Turkey, Istanbul",
+      "companyLink":"https://www.profassign.com/",
+      "company": "ProfAssign",
+      "position": "Frontend Developer",
+      "workType": "Full-time",
+      "startDate": {
+        "year": "2021",
+        "month": "June"
+      },
+      "endDate": {
+        "year": "2021",
+        "month": "September"
+      },
+      "about": "Startup project company focused on creating licenced software solutions for business companies."
+    },
+    {
+      "id": 3,
+      "location": "Turkey, Ankara",
+      "companyLink":"https://www.priviasecurity.com/en/",
+      "company": "Privia Security",
+      "position": "Frontend Developer",
+      "workType": "Full-time",
+      "startDate": {
+        "year": "2021",
+        "month": "April"
+      },
+      "endDate": {
+        "year": "2021",
+        "month": "June"
+      },
+      "about": "Ankara based well known CSFI Gold Sponsor Cyber Security company to provide services such as penetration test, consultancy and online courses."
+    },
+    {
+      "id": 2,
+      "location": "Turkey, Ankara",
+      "companyLink":"https://www.priviasecurity.com/en/",
+      "company": "Privia Security",
+      "position": "Frontend Developer",
+      "workType": "Internship",
+      "startDate": {
+        "year": "2021",
+        "month": "January"
+      },
+      "endDate": {
+        "year": "2021",
+        "month": "April"
+      },
+      "about": "Ankara based well known CSFI Gold Sponsor Cyber Security company to provide services such as penetration test, consultancy and online courses."
+    },
+    {
+      "id": 1,
+      "location": "Turkey, Sakarya",
+      "companyLink":"https://sakarya.esnturkey.org/",
+      "company": "ESN Sakarya",
+      "position": "Web Project Manager",
+      "workType": "Volunteering",
+      "startDate": {
+        "year": "2020",
+        "month": "January"
+      },
+      "endDate": {
+        "year": "2021",
+        "month": "January"
+      },
+      "about": "Student network operating in 40 countries as voluntary purposes to provide students a better exchange experience where they are having their programme."
+    }
+
+  ]
+}
