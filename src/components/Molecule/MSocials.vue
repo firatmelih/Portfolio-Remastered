@@ -55,7 +55,10 @@
   .m-socials {
     display: flex;
     justify-content: center;
+    color: white;
     a {
+      color: white;
+
       padding: 0 25px;
     }
   }

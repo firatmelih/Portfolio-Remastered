@@ -1,6 +1,10 @@
 <template>
-  <a-text bold level="x-large">
-   I am {{ currentPrompt }} {{cursor}}
+  <a-text
+    bold
+    level="x-large"
+  >
+    <template v-if="!onlyCursor">I am {{ currentPrompt }}</template>
+     {{ cursor }}
   </a-text>
 </template>
 
@@ -14,6 +18,9 @@
       willType: {
         type: Array,
         required: true
+      },
+      onlyCursor: {
+        type: Boolean,
       }
     },
     data: () => {
@@ -27,17 +34,17 @@
         for (let x = 0; x <= script.length; x++) {
           x === script.length ? x = 0 : x
           await this.sleep(200)
-          for(let y=0; y < script[x].length; y++){
+          for (let y = 0; y < script[x].length; y++) {
             await this.sleep(200)
-            this.currentPrompt+=(script[x][y])
+            this.currentPrompt += (script[x][y])
           }
-          for ( let counter = 0; counter < 3 ; counter++){
+          for (let counter = 0; counter < 3; counter++) {
             this.cursor = '|'
             await this.sleep(400)
-            this.cursor = '';
+            this.cursor = ''
             await this.sleep(400)
           }
-          for(let y=0; y < script[x].length; y++){
+          for (let y = 0; y < script[x].length; y++) {
             await this.sleep(50)
             this.currentPrompt = this.currentPrompt.slice(0, -1)
           }

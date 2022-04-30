@@ -66,9 +66,30 @@
     cursor: pointer;
     background: gray;
   }
-  p {
+  span {
     color: $black !important;
   }
 }
 
+.js-const{
+  color: $js-constant !important;
+}
+.js-custom{
+  color: $customLiteral !important;
+}
+.js-parameter{
+  color: $js-parameter !important;
+}
+.js-string{
+  color: $stringLiteral !important;
+}
+.js-special{
+  color: $js-special-keywords !important;
+}
+.js-symbol{
+  color: lightgray;
+}
+.js-variable{
+  color: $js-variable;
+}
 

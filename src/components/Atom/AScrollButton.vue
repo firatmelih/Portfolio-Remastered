@@ -27,6 +27,7 @@
     align-items: center;
     }
   .a-scroll-button{
+    cursor: pointer;
     transition: all 1s;
     &.-clicked{
       transform: rotate(180deg);
@@ -41,15 +42,18 @@
     color: white;
     font-size: $font-mega;
     p{
-      cursor: pointer;
       transition: all .5s;
       position:relative;
       text-align: center;
-      top: -30px;
+      top: -35%;
+      background: red;
+      padding: 0;
+      margin:0;
+      height: 0;
     }
     &:hover{
       p{
-        top: 0;
+        top: 15%;
       }
     }
   }

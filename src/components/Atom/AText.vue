@@ -1,10 +1,10 @@
 <template>
-<p
+<span
   class="a-text"
   :class="['-' + level, '-' + color, {'-bold': bold}]"
 >
   <slot/>
-</p>
+</span>
 </template>
 
 <script>
@@ -23,7 +23,7 @@
       },
       color:{
         required: false,
-        default: 'white',
+        default: '',
         type: String
       }
     }
@@ -73,6 +73,9 @@
     }
     &.-white{
       color: $white;
+    }
+    &.-orange{
+      color: $primary-orange;
     }
   }
 </style>

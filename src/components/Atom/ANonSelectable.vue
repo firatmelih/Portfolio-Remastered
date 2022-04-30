@@ -9,9 +9,3 @@
     name: 'ANonSelectable'
   }
 </script>
-
-<style lang="scss">
-.a-non-selectable{
-
-}
-</style>

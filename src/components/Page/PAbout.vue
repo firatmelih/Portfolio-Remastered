@@ -6,47 +6,47 @@
       :class="{'scroll-clicked':scrollClicked}"
     >
       <div class="wardrobe">
-        <m-about-inside
+        <o-about-inside
           :getWillMakeWay="getWillMakeWay"
           :whatToRender="renderMeThis"
         />
         <div
           id="work"
-          @click="makeWayGuys('work')"
-          :class="['wardrobe__item', '-work',{'will-make-way-to-left':willMakeWay}]"
+          @click="makeWayGuys('resume')"
+          :class="['wardrobe__item', '-resume',{'will-make-way-to-left':willMakeWay}]"
         >
           <w-icon
-            size="45"
+            size="100"
             color="primary"
           >
-            mdi mdi-briefcase
+            mdi mdi-card-account-details-outline
           </w-icon>
-          <a-text level="mega">Work</a-text>
+          <a-text bold level="mega">resume</a-text>
         </div>
         <div
           id="hobby"
-          @click="makeWayGuys('hobby')"
-          :class="['wardrobe__item', '-hobby',{'will-make-way-to-right':willMakeWay}]"
+          @click="makeWayGuys('portfolio')"
+          :class="['wardrobe__item', '-portfolio',{'will-make-way-to-right':willMakeWay}]"
         >
           <w-icon
-            size="45"
+            size="100"
             color="primary"
           >
-            mdi mdi-gamepad-down
+            mdi mdi-briefcase-outline
           </w-icon>
-          <a-text level="mega">Hobby Projects</a-text>
+          <a-text bold level="mega">portfolio</a-text>
         </div>
         <div
-          @click="makeWayGuys('sketch')"
-          :class="['wardrobe__item', '-sketch',{'will-make-way-to-left':willMakeWay}]"
+          @click="makeWayGuys('about')"
+          :class="['wardrobe__item', '-about',{'will-make-way-to-left':willMakeWay}]"
         >
           <w-icon
-            size="45"
+            size="100"
             color="primary"
           >
-            mdi mdi-book
+            mdi mdi-account-box-outline
           </w-icon>
-          <a-text level="mega">Sketch Book</a-text>
+          <a-text bold level="mega">who am I</a-text>
         </div>
         <div
           @click="makeWayGuys('contact')"
@@ -69,13 +69,13 @@
   import MNavigation from '@/components/Molecule/MNavigation'
   import MContainer from '@/components/Molecule/MContainer'
   import PDefault from '@/components/Page/PDefault'
-  import MAboutInside from '@/components/Organism/MAboutInside'
+  import OAboutInside from '@/components/Organism/OAboutInside'
   import AText from '@/components/Atom/AText'
   import { disable, enable } from 'cursor-flashlight'
 
   export default {
     name: 'PAbout',
-    components: { PDefault, MContainer, MNavigation, AText, MAboutInside },
+    components: { PDefault, MContainer, MNavigation, AText, OAboutInside },
     data () {
       return {
         scrollClicked: false,
@@ -115,10 +115,12 @@
     height: 100%;
     width: 100%;
 
-    & > div, & > * > * {
+    & > * > * {
+      transition: ease-in-out .5s !important;
+    }
+    & > div{
       transition: ease-in-out 1s !important;
     }
-
     @media only screen and (max-width: 750px) {
       display: flex;
       flex-direction: column;
@@ -152,12 +154,12 @@
       &:hover {
         cursor: pointer;
 
-        p, i {
-          transform: scale(1.5);
+        span, i {
+          transform: scale(1.2);
         }
       }
 
-      &.-work {
+      &.-resume {
         background: url('/src/assets/workhistory.gif');
         background-size: cover;
 
@@ -167,7 +169,7 @@
         }
       }
 
-      &.-hobby {
+      &.-portfolio {
         background: url('/src/assets/hobbyworks.gif');
         background-size: cover;
 
@@ -177,7 +179,7 @@
         }
       }
 
-      &.-sketch {
+      &.-about {
         background: url('/src/assets/sketchbook.gif');
         background-size: cover;
 
