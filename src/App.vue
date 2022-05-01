@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  // VERSION 1.0.1
   // import { mapState, mapActions } from 'vuex'
 
   export default {
