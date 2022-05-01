@@ -80,7 +80,7 @@
       return {
         scrollClicked: false,
         willMakeWay: false,
-        renderMeThis: ''
+        renderMeThis: 'loading'
       }
     },
     methods: {
@@ -92,8 +92,8 @@
         }
       },
       getWillMakeWay(localWillMakeWay){
+        if(this.willMakeWay)this.renderMeThis=''
         this.willMakeWay = localWillMakeWay
-        if(this.willMakeWay===false)this.renderMeThis=''
       }
     },
     mounted () {
@@ -102,6 +102,7 @@
       } else {
         enable({ size: '15vmax' })
       }
+      this.renderMeThis=''
     }
   }
 </script>
