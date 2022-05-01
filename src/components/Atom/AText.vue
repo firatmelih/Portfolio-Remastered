@@ -1,10 +1,20 @@
 <template>
-<span
-  class="a-text"
-  :class="['-' + level, '-' + color, {'-bold': bold}]"
->
+<template v-if="level==='ultra'">
+  <h1
+    class="a-text"
+    :class="['-' + level, '-' + color, {'-bold': bold}]"
+  >
+  <slot/>
+</h1>
+</template>
+  <template v-else>
+    <span
+      class="a-text"
+      :class="['-' + level, '-' + color, {'-bold': bold}]"
+    >
   <slot/>
 </span>
+  </template>
 </template>
 
 <script>
