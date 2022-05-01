@@ -86,6 +86,7 @@
 
     <m-about-inside-container
       :close-the-gates="closeTheGates"
+      class="contact"
       v-else-if="whatToRender==='contact'"
     >
       <m-contact-form/>

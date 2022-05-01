@@ -53,12 +53,12 @@
           :class="['wardrobe__item', '-contact',{'will-make-way-to-right':willMakeWay}]"
         >
           <w-icon
-            size="45"
+            size="100"
             color="primary"
           >
             mdi mdi-cellphone
           </w-icon>
-          <a-text  class="wardrobe-title" level="mega">Contact</a-text>
+          <a-text  class="wardrobe-title" bold level="mega">Contact</a-text>
         </div>
       </div>
     </m-container>
@@ -107,18 +107,18 @@
 </script>
 
 <style lang="scss">
-  .-contact-selected{
-    overflow: hidden;
-    height: 100vh;
-  }
   .wardrobe {
     position: relative;
     display: grid;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0;
-    height: 100%;
-    width: 100%;
-
+    height: 100vh;
     & > * > * {
       transition: ease-in-out .5s !important;
     }
@@ -129,6 +129,7 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow: scroll !important;
       *{
         .wardrobe-title{
           font-size: 48px !important;
@@ -143,7 +144,6 @@
       z-index: 3;
       position: relative;
       right: 0;
-
       &.will-make-way-to-right {
         position: relative;
         right: -100% !important;
