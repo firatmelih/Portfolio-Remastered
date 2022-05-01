@@ -15,7 +15,6 @@
   </div>
   <div class="m-contact-form__image-area">
     <div class="m-contact-form__image-area__center">
-      <img width="500" height="500" src="https://img.cppng.com/download/2020-06/88364-brown-pusheen-rectangle-cat-free-png-hq.png" alt=""/>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39878.58128846284!2d11.933876054982685!3d51.340346497950094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a6890b8f4bfc45%3A0x1c5843ee9a869eba!2sMerseburg!5e0!3m2!1sen!2sde!4v1651277370793!5m2!1sen!2sde" width="600" height="450" style="border:0; z-index: 2; position: inherit;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>

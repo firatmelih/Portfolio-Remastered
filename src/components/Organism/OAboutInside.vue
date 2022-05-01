@@ -74,7 +74,7 @@
 
   <m-about-inside-container
     :close-the-gates="closeTheGates"
-    v-else
+    v-else-if="whatToRender==='contact'"
   >
     <m-contact-form/>
   </m-about-inside-container>

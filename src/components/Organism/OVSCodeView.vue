@@ -227,7 +227,11 @@
     }
     &__editor-area{
       @media only screen and (max-width: 750px) {
-        overflow: hidden;
+        height: 100vh;
+        padding: 0 25px;
+        *>span{
+          font-size: 16px !important;
+        }
       }
     }
   }

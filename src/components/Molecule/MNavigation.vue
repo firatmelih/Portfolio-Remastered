@@ -165,7 +165,7 @@
       }
 
       &__mobile {
-        z-index: 101;
+        z-index: 101241234213;
         transition: 1s;
         position: fixed;
         top: -900px;

@@ -3,7 +3,7 @@
     <m-navigation/>
     <m-container
       class="pt-100"
-      :class="{'scroll-clicked':scrollClicked}"
+      :class="[{'scroll-clicked':scrollClicked}, {'-contact-selected':renderMeThis==='contact'}]"
     >
       <div class="wardrobe">
         <o-about-inside
@@ -93,6 +93,7 @@
       },
       getWillMakeWay(localWillMakeWay){
         this.willMakeWay = localWillMakeWay
+        if(this.willMakeWay===false)this.renderMeThis=''
       }
     },
     mounted () {
@@ -106,7 +107,10 @@
 </script>
 
 <style lang="scss">
-
+  .-contact-selected{
+    overflow: hidden;
+    height: 100vh;
+  }
   .wardrobe {
     position: relative;
     display: grid;
@@ -122,9 +126,12 @@
       transition: ease-in-out 1s !important;
     }
     @media only screen and (max-width: 750px) {
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      height: auto;
+      *{
+        font-size: 48px !important;
+      }
       &__item {
         height: 500px;
       }
