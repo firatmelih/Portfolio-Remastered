@@ -10,7 +10,6 @@
 
 <script>
   import AText from '@/components/Atom/AText'
-  document.title = 'test'
   export default {
     name: 'ATypeWriter',
     components: { AText },

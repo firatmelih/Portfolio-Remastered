@@ -92,7 +92,6 @@
         }
       },
       getWillMakeWay(localWillMakeWay){
-        if(this.willMakeWay)this.renderMeThis=''
         this.willMakeWay = localWillMakeWay
       }
     },
