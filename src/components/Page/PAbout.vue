@@ -21,7 +21,7 @@
           >
             mdi mdi-card-account-details-outline
           </w-icon>
-          <a-text bold level="mega">resume</a-text>
+          <a-text class="wardrobe-title" bold level="mega">resume</a-text>
         </div>
         <div
           id="hobby"
@@ -34,7 +34,7 @@
           >
             mdi mdi-briefcase-outline
           </w-icon>
-          <a-text bold level="mega">portfolio</a-text>
+          <a-text  class="wardrobe-title" bold level="mega">portfolio</a-text>
         </div>
         <div
           @click="makeWayGuys('about')"
@@ -46,7 +46,7 @@
           >
             mdi mdi-account-box-outline
           </w-icon>
-          <a-text bold level="mega">who am I</a-text>
+          <a-text  class="wardrobe-title" bold level="mega">who am I</a-text>
         </div>
         <div
           @click="makeWayGuys('contact')"
@@ -58,7 +58,7 @@
           >
             mdi mdi-cellphone
           </w-icon>
-          <a-text level="mega">Contact</a-text>
+          <a-text  class="wardrobe-title" level="mega">Contact</a-text>
         </div>
       </div>
     </m-container>
@@ -130,7 +130,9 @@
       display: flex;
       flex-direction: column;
       *{
-        font-size: 48px !important;
+        .wardrobe-title{
+          font-size: 48px !important;
+        }
       }
       &__item {
         height: 500px;
