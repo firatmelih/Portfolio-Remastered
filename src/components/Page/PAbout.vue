@@ -1,11 +1,9 @@
 <template>
-  <p-default :class="['non-selectable',{'scroll-clicked':scrollClicked}]">
-    <m-navigation/>
+  <p-default :class="['non-selectable',{'scroll-clicked':scrollCount===1}]">
     <m-container
-      class="pt-100"
-      :class="[{'scroll-clicked':scrollClicked}, {'-contact-selected':renderMeThis==='contact'}]"
+      :class="[{'scroll-clicked':scrollCount===1}, {'-contact-selected':renderMeThis==='contact'}]"
     >
-      <div class="wardrobe">
+      <div id="wardrobe" class="wardrobe">
         <o-about-inside
           :getWillMakeWay="getWillMakeWay"
           :whatToRender="renderMeThis"
@@ -66,7 +64,6 @@
 </template>
 
 <script>
-  import MNavigation from '@/components/Molecule/MNavigation'
   import MContainer from '@/components/Molecule/MContainer'
   import PDefault from '@/components/Page/PDefault'
   import OAboutInside from '@/components/Organism/OAboutInside'
@@ -75,10 +72,10 @@
 
   export default {
     name: 'PAbout',
-    components: { PDefault, MContainer, MNavigation, AText, OAboutInside },
+    components: { PDefault, MContainer,  AText, OAboutInside },
     data () {
       return {
-        scrollClicked: false,
+        scrollCount:0,
         willMakeWay: false,
         renderMeThis: 'loading'
       }
@@ -86,7 +83,7 @@
     methods: {
       async makeWayGuys (event) {
         this.renderMeThis = event
-        window.scrollTo(0, 0)
+        document.getElementById('wardrobe').scrollIntoView()
         if (!this.willMakeWay) {
           this.willMakeWay = true
         }
@@ -96,7 +93,7 @@
       }
     },
     mounted () {
-      if (!this.scrollClicked) {
+      if (this.scrollCount!==1) {
         disable()
       } else {
         enable({ size: '15vmax' })
@@ -110,7 +107,7 @@
   .wardrobe {
     position: relative;
     display: grid;
-    overflow: scroll;
+    overflow: hidden !important;
     &::-webkit-scrollbar {
       display: none;
       -ms-overflow-style: none;  /* IE and Edge */
@@ -129,7 +126,7 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      overflow: scroll !important;
+      overflow: y !important;
       *{
         .wardrobe-title{
           font-size: 48px !important;

@@ -20,6 +20,9 @@
     background-size: cover;
   }
   * {
+    &::-webkit-scrollbar {
+      display: none;
+    }
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif !important;
     scroll-behavior: smooth;

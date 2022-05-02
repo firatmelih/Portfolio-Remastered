@@ -1,6 +1,5 @@
 <template>
-  <a-non-selectable>
-    <div class="navbar">
+    <div :class="{'-collapsed':isMobile && menuCollapsed}" class="navbar a-non-selectable">
       <div class="navbar__left">
         <router-link
           @mouseenter="logoHover=true"
@@ -29,14 +28,9 @@
         class="navbar__right"
       >
         <ul>
-          <li>
-            <router-link
-              to="/about"
-            >About Me
-            </router-link>
-          </li>
-          <li>Skills</li>
-          <li>Career</li>
+          <li>Currently</li>
+          <li>Nothing</li>
+          <li>Here</li>
         </ul>
       </div>
       <div
@@ -52,27 +46,20 @@
     </div>
     <div :class="['navbar__right__mobile',{'-collapsed':isMobile && menuCollapsed}]">
       <ul>
-        <li>
-          <router-link
-            to="/about"
-          >About Me
-          </router-link>
-        </li>
-        <li>Skills</li>
-        <li>Career</li>
+        <li>Currently</li>
+        <li>Nothing</li>
+        <li>Here</li>
       </ul>
     </div>
-  </a-non-selectable>
 </template>
 
 <script>
 
   import AText from '@/components/Atom/AText'
-  import ANonSelectable from '@/components/Atom/ANonSelectable'
 
   export default {
     name: 'MNavigation',
-    components: { ANonSelectable, AText },
+    components: {  AText },
     data: () => {
       return {
         logoHover: false,
@@ -98,14 +85,15 @@
   @import "src/scss/script-styles";
 
   .navbar {
+    &.-collapsed{
+      position: fixed;
+      top: 0;
+    }
     z-index: 102;
-    position: fixed;
-    top: 0;
     background: $body-bg;
     height: 100px;
     width: 100vw;
-
-    overflow: clip;
+    overflow: hidden !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,9 +133,7 @@
           }
 
           &:nth-child(1) {
-            a {
               color: $primary-blue;
-            }
           }
 
           &:nth-child(2) {
@@ -190,9 +176,7 @@
             font-size: 50px;
 
             &:nth-child(1) {
-              a {
                 color: $primary-blue;
-              }
             }
 
             &:nth-child(2) {

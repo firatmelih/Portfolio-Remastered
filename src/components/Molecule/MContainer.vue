@@ -12,16 +12,13 @@
 
 <style lang="scss">
   .m-container {
-    padding-top: 100px;
     background: rgba(0, 0, 0, 0.58);
     overflow: hidden;
     height: 100vh;
     margin: 0 160px;
     text-align: center;
     transition: transform 1s;
-    &.scroll-clicked{
-      transform: translateY(-1000px);
-    }
+
     @media only screen and (max-width: 750px) {
       width: 100%;
       height: 100%;

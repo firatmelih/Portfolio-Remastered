@@ -33,7 +33,7 @@
       transform: rotate(180deg);
     }
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 75vh;
     border: 2px solid white;
     border-radius: 30px;

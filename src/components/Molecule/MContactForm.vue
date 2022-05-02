@@ -41,7 +41,6 @@
   flex-direction: row;
   @media only screen and (max-width: 1360px) {
     border-radius: 15px;
-    padding-top: 100px;
     height: 700px;
   }
   &__container{
